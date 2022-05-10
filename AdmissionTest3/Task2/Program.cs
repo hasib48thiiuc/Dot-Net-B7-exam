@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Task2;
+
+string sp = Console.ReadLine();
+
+
+string final = sp.GetCounts();
+
+

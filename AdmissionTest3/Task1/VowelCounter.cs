@@ -11,33 +11,52 @@ namespace Task1
         public string GetCounts(string mess)
         {
             int[] sealer = new int[100] ;
-            int i = 0;
-            while(i < mess.Length)
+            int s = 0;
+
+            while (s < mess.Length)
             {
-                if (mess[i] == 'a' || mess[i] == 'A')
+                char ch = mess[s];
+                switch (ch)
                 {
-                    sealer[0]++;
+                    case 'a':
+                        sealer[0]++;
+                        break;
+                    case 'A':
+                        sealer[0]++;
+                        break;
+                    case 'e':
+                        sealer[1]++;
+                        break;
+                    case 'E':
+                        sealer[1]++;
+                        break;
+                    case 'i':
+                        sealer[2]++;
+                        break;
+                    case 'I':
+                        sealer[2]++;
+                        break;
+                    case 'o':
+                        sealer[3]++;
+                        break;
+                    case 'O':
+                        sealer[3]++;
+                        break;
+                    case 'u':
+                        sealer[4]++;
+                        break;
+                    case 'U':
+                        sealer[0]++;
+                        break;
                 }
-                else if (mess[i] == 'e' || mess[i] == 'E')
-                {
-                    sealer[1]++;
-                }
-                else if (mess[i] == 'i' || mess[i] == 'I')
-                {
-                    sealer[2]++;
-                }
-                else if (mess[i] == 'o' || mess[i] == 'O')
-                {
-                    sealer[3]++;
-                }
-                else if (mess[i] == 'u' || mess[i] == 'U')
-                {
-                    sealer[4]++;
-                }
-                i++;
+                s++;
+
             }
-            string summ = String.Join("", sealer);
-            return summ;
+            string sum = String.Join("", sealer);
+            return sum;
+
+
+       
         }
     }
 }
